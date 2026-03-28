@@ -1,31 +1,17 @@
-import os,sys
+"""Simple module demonstrating clean Python code."""
 
 
-def myFunction( a,b ):
-    x=1+  2
-    if(a> b):
-        print( "A is greater" )
-    else:
-     print("B is greater")
-    unused_var = 123
-    return  x
+def greet(name: str) -> str:
+    """Return a greeting message for the given name."""
+    return f"Hello, {name}!"
 
 
-class myclass:
-    def __init__(self,name):
-        self.Name=name
-
-    def SayHello(self):
-        print("hello "+self.Name)
-
-
-def divide(a,b):
-    try:
-        result=a/b
-    except:
-        print("error")
-    return result
+def main() -> None:
+    """Main function to execute the script."""
+    user_name = "World"
+    message = greet(user_name)
+    print(message)
 
 
-for i in range(0,10):
-    print(i)
+if __name__ == "__main__":
+    main()
